@@ -1,0 +1,25 @@
+﻿<div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6">Login</h2>
+    <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="titulo">
+            Titulo
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               type="text" @bind="@NuevoTitulo" />
+    </div>
+    <div class="mb-6">
+        <label class="block text-gray-700 font-bold mb-2" for="descripcion">
+            Descripcion
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               @bind="@NuevaDescripcion" />
+    </div>
+    <button class="float-right rounded-full bg-blue-500 text-white flex items-center" @onclick="@(() => MostrarFormulario = false)">
+        <p>Cancelar</p>
+    </button>
+
+    <button class="float-right rounded-full bg-blue-500 text-white flex items-center" @onclick="@(() => OnClick.Invoke())">
+        @*Boton agregar nota a la lista, esta en el archivo de ListaNotas*@
+        <p>Crear Nota</p>
+    </button>
+</div>

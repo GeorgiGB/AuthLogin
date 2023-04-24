@@ -1,0 +1,12 @@
+﻿<div class="m4 p-2 rounded-lg shadow" style="background-color: @colores[new Random().Next(colores.Count)] ">
+    <h3 class="font-bold text-lg">
+        @Titulo
+    </h3>
+    <br />
+    <p class="text-white rounded-lg">
+        @Descripcion
+    </p>
+    <br />
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick=@OnClick>Eliminar</button>
+
+</div>

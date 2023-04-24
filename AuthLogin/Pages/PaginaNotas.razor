@@ -1,0 +1,14 @@
+﻿@page "/authentication/notas"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using AuthLogin.Components
+
+<h1>Bienvenido @Username</h1>
+<hr />
+<p>Contenido del mensaje principal</p>
+
+<BlocNota />
+
+<div class="d-flex justify-content-end mt-3">
+    <FormCrearNotas />
+</div>

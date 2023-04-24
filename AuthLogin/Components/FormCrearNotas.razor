@@ -1,0 +1,30 @@
+﻿<div class="fixed z-10 inset-0 overflow-y-auto" style="background-color: rgba(0,0,0,0.4);">
+    <form class="flex items-center justify-center min-h-screen px-4" @onsubmit=@CrearNota>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-6">Agregar Nota</h2>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="titulo">
+                        Titulo
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           type="text" id="titulo" name="titulo" @bind="@NuevoTitulo" @oninput="@(e => NuevoTitulo = e.Value.ToString())" />
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2" for="descripcion">
+                        Descripcion
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           id="descripcion" name="descripcion" @bind="@NuevaDescripcion" @oninput="@(e => NuevaDescripcion = e.Value.ToString())" />
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    @CancelText
+                </button>
+
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    @OkText
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

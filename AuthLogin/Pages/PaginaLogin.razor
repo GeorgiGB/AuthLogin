@@ -1,0 +1,22 @@
+﻿@page "/login"
+@using AuthLogin.Data
+@using Microsoft.AspNetCore.Components.Forms
+
+<h1>Login</h1>
+
+<EditForm Model="@paginaLogin" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="Input_Name">Nombre de usuario</label>
+        <InputText id="Input_Name" class="form-control" @bind-Value="@Username" />
+    </div>
+
+    <div class="form-group">
+        <label for="Input_Password">Contraseña</label>
+        <InputText id="Input_Password" class="form-control" type="password" @bind-Value="@Password" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+</EditForm>
